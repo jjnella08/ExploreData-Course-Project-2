@@ -14,7 +14,7 @@ SCC <- readRDS("./exdata-data-NEI_data/Source_Classification_Code.rds")
 ## Collect the subset for Baltimore data using 'On-Road'
 subNEI <- NEI[NEI$fips=="24510" & NEI$type=="ON-ROAD",  ]
 
-## Aggregate the total emissions from coal combustion-related sources by year
+## Aggregate the total emissions from motor vehicle sources by year
 aggSubNEI <- aggregate(Emissions ~ year, data=subNEI, FUN=sum)
 
 ## Construct the plot and save it to a PNG file.
